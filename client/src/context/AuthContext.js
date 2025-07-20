@@ -13,12 +13,16 @@ class AuthProvider extends Component {
       user: null,
       userImage: null,
       registeredUser: null,
+      clearRegisteredUser: this.clearRegisteredUser,  // <-- ajoute ici
       error: null,
       logIn: this.logIn,
       signUp: this.signUp,
       logOut: this.logOut
     };
   }
+  clearRegisteredUser = () => {
+    this.setState({ registeredUser: null });
+  };
 
   componentDidMount() {
     // console.log("AUTH: provider");
